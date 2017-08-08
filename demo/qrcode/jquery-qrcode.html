@@ -1,14 +1,14 @@
 <!--
 	作者：444811716@qq.com
 	时间：2017-08-08
-	描述：jquery-qrcode.js生成二维码
+	描述：jquery-qrcode.js生成二维码,https://github.com/jeromeetienne/jquery-qrcode,http://www.cnblogs.com/xiyangbaixue/p/4150390.html
 -->
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="utf-8">
-		<title>生成二维码</title>
+		<title>jquery-qrcode.js生成二维码</title>
 	</head>
 
 	<body>
@@ -16,13 +16,13 @@
 		<div id="qrcode_0"></div>
 		<div>qrcode_1</div>
 		<div id="qrcode_1"></div>
-		<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="../lib/jquery/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../../lib/qrcode/jquery.qrcode.min.js"></script>
 		<script>
 			$('#qrcode_0').qrcode(toUtf8("要编码的字符串"));
 			// 更详细的配置
 			$('#qrcode_1').qrcode({
-				text: "https://www.baidu.com", // 要编码的字符串
+				text: "https://github.com/BugHunter1234", // 要编码的字符串
 				width: 150, // 定义宽度
 				height: 150, // 定义高度
 //				background: "gold", // 背景色

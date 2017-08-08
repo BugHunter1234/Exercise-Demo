@@ -1,0 +1,52 @@
+<!--
+	作者：444811716@qq.com
+	时间：2017-08-08
+	描述：qrcode.js生成二维码,https://github.com/davidshimjs/qrcodejs,http://www.cnblogs.com/xiyangbaixue/p/4150390.html
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>qrcode.js生成二维码</title>
+	</head>
+
+	<body>
+		<div>qrcode_0</div>
+		<div id="qrcode_0"></div>
+		<div>qrcode_1</div>
+		<div id="qrcode_1"></div>
+		<button onclick="clear();">clear</button>
+		<button onclick="makeCode();">makeCode</button>
+		<div>qrcode_2</div>
+		<div id="qrcode_2"></div>
+		<script type="text/javascript" src="../../lib/qrcode/qrcode.js"></script>
+		<script>
+			new QRCode(document.getElementById("qrcode_0"), "要编码的字符串");
+			var qrcode = new QRCode(document.getElementById("qrcode_1"), {
+				text: "https://github.com/BugHunter1234",
+				width: 150,
+				height: 150,
+				colorDark: "deepskyblue",
+				colorLight: "#ffffff",
+			});
+			var qrcode_2 = new QRCode(document.getElementById("qrcode_2"), {
+				text: "https://github.com/BugHunter1234",
+				width: 150,
+				height: 150,
+				colorDark: "deepskyblue",
+				colorLight: "#ffffff",
+				useSVG: true
+			});
+
+			function clear() {
+				qrcode_2.clear(); // clear the code.
+			}
+
+			function makeCode() {
+				qrcode.makeCode("https://bughunter1234.github.io/"); // clear the code.
+			}
+		</script>
+	</body>
+
+</html>
