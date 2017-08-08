@@ -19,15 +19,17 @@
 		<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="../../lib/qrcode/jquery.qrcode.min.js"></script>
 		<script>
-			$('#qrcode_0').qrcode(toUtf8("要编码的字符串"));
-			// 更详细的配置
-			$('#qrcode_1').qrcode({
-				text: "https://github.com/BugHunter1234", // 要编码的字符串
-				width: 150, // 定义宽度
-				height: 150, // 定义高度
-//				background: "gold", // 背景色
-				foreground: "deepskyblue" // 前景色
-			});
+			(function() {
+				$('#qrcode_0').qrcode(toUtf8("要编码的字符串"));
+				// 更详细的配置
+				$('#qrcode_1').qrcode({
+					text: "https://github.com/BugHunter1234", // 要编码的字符串
+					width: 150, // 定义宽度
+					height: 150, // 定义高度
+					foreground: "deepskyblue" // 前景色
+				});
+			})()
+
 			/**
 			 * 中文转utf-8
 			 * @param {Object} str
